@@ -43,7 +43,7 @@ class Item(Resource):
 
         item_data = Item.parser.parse_args() #price
 
-        item = ItemModel(name, item_data['price'], item_data['store_id'])
+        item = ItemModel(name, item_data['price'], item_data['store_id']) # **data
 
         try:
             item.save_to_db()
